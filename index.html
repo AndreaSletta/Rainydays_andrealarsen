@@ -1,10 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My first website</title>
+    <title>Rainy Days</title>
+    <meta name="description" content="Rainy days online shop" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/rainydays.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/msh8obx.css" />
   </head>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
+    <header>
+      <div id="headerlogo">
+        <a href="index.html">
+          <img src="images/RainyDays_Logo_notext.png" alt="Rainy days logo" />
+        </a>
+      </div>
+      <div id="headernav">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="headercart">
+        <img src="images/icons/carticon.png" alt="Cart icon" />
+      </div>
+      <div id="headersearch">
+        <img src="images/icons/searchicon.png" alt="Search icon" />
+      </div>
+      
+    </header>
+    <main>
+      <div id="indexbackground">
+        <img src="images/index.jpg" />
+        <div id="indexbackgroundtext">
+          <h1>Pushing the comfort zone</h1>
+          <a href="shop.html">
+            <div class="orangebutton">
+              <p>SHOP NOW</p>
+            </div>
+          </a>
+        </div>
+        <div id="scrolldownbutton">
+          <img src="images/icons/arrowdownwhite.png" alt="Scroll down button" />
+        </div>
+      </div>
+
+      <div id="indexflexbox">
+        <div id="flex1">
+          <div class="squareimage">
+            <img src="images/hikerswbackpack.jpg" alt="Newest collection" />
+          </div>
+          <h2>AUTUMN COLLECTION 2020</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata
+          </p>
+          <a href="shop.html">Check out the new collection here!</a>
+        </div>
+        <div id="flex2">
+          <div class="squareimage">
+            <img src="images/founder.jpg" alt="Our story" />
+          </div>
+          <h2>OUR STORY</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata
+          </p>
+          <a href="about.html">Learn more about us here!</a>
+        </div>
+      </div>
+      <div id="indexcarousel"></div>
+    </main>
+    <footer>
+      <div id="footer">
+        <div id="footerlogo">
+          <a href="index.html">
+            <img src="images/RainyDays_Logo.png" alt="Rainy days logo" />
+          </a>
+        </div>
+        <div class="footeralign">
+          <img src="images/icons/phoneicon.png" alt="Phone icon" />
+          <h3>(+27)98987740</h3>
+        </div>
+        <div class="footeralign">
+          <img src="images/icons/chaticon.png" alt="Chat icon" />
+          <h3>rainydays@gmail.com</h3>
+        </div>
+        <div id="signup"></div>
+        <h3>Copyright &copy;</h3>
+      </div>
+    </footer>
   </body>
 </html>

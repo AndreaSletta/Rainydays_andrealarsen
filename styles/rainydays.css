@@ -1,0 +1,322 @@
+body {
+  margin: 0pt;
+}
+h1,
+h2,
+h3 {
+  font-family: din-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 7vw;
+  line-height: 8vw;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+p,
+a {
+  font-family: ff-basic-gothic-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  background-color: white;
+  text-align: center;
+  height: 70px;
+  position: fixed;
+  width: 100vw;
+  top: 0pt;
+  z-index: 2;
+}
+
+header div {
+  display: inline-block;
+  height: 70px;
+}
+
+#headerlogo {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:50px;
+}
+
+#headerlogo img {
+  height: 50px;
+}
+
+#headernav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  
+}
+
+nav li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: din-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav a {
+  color: #0a3641;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-family: din-condensed, sans-serif;
+  font-weight: 500;
+  font-size:20px;
+}
+
+nav a:hover {
+  color: #8c4300;
+}
+
+#headercart,
+#headersearch {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+#headercart {
+     padding-left: 10px;
+    padding-right: 50px;
+}
+#headersearch {
+     padding-left: 10px;
+    padding-right: 10px;
+}
+
+#headercart img,
+#headersearch img {
+  height: 30px;
+}
+
+/* INDEX */
+
+#indexbackground {
+  position: relative;
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#indexbackground img {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#indexbackgroundtext {
+  position: absolute;
+  bottom: 70px;
+  width: 40vw;
+  height: 50%;
+  z-index: 1;
+  left: 10vw;
+  color: white;
+}
+
+.orangebutton {
+  background-color: #8c4300;
+  padding: 5px;
+  border-radius: 3px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orangebutton p {
+  color: white;
+}
+
+.orangebutton:hover {
+  background-color: #0d738c;
+}
+
+#scrolldownbutton {
+  position: absolute;
+  bottom: 70px;
+  width: 3vw;
+  height: 3vw;
+  z-index: 1;
+  right: 10vw;
+}
+
+#scrolldownbutton img {
+  height: 100%;
+  width: 100%;
+}
+
+#indexflexbox {
+  display: flex;
+  column-count: 2;
+  width: 75vw;
+  margin-left: 12.5vw;
+  margin-right: 12.5vw;
+  padding-top: 90px;
+}
+
+#indexflexbox a {
+  text-decoration: underline;
+  font-style: italic;
+  color: #8c4300;
+}
+
+#flex1 {
+  width: 35vw;
+  margin-right: 5vw;
+}
+#flex2 {
+  width: 35vw;
+}
+
+.squareimage {
+  width: 35vw;
+  height: 25vw;
+}
+
+.squareimage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#indexcarousel {
+  margin-top: 90px;
+  width: 100vw;
+  height: 50vh;
+  background-color: #0d738c;
+}
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #0A3641;
+  
+}
+
+#footerlogo {
+  height: 100px;
+  width: 200px;
+  position: relative;
+}
+
+#footerlogo img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footeralign {
+}
+
+.footeralign img {
+    float:left;
+  width: 2vw;
+  height: 2vw;
+}
+
+
+/* SHOP */
+
+.banner {
+    
+ position: relative;
+background-color: gray;
+width: 100vw;
+height:37vw;
+overflow: hidden;
+  
+    
+}
+
+.banner img{
+z-index: -1;
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.banner h1 {
+    
+  position: absolute;
+  bottom: 70px;
+  width: 50vw;
+  z-index: 1;
+  right: 7vw;
+  color: white;
+  text-align:right;
+}
+
+.breadcumbs {
+  margin-left: 5vw;
+    
+}
+
+.breadcumbs ul {
+    display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  list-style:none;
+}
+
+.breadcumbs a {
+    text-decoration:none;
+    color:black;
+    font-family: din-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: #0A3641;
+}
+
+  .breadcumbs li+li:before {
+  content: ;/
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.breadcumbs a:hover {
+    color: #8c4300;
+}
+
+#shopproducts {
+    background-color:red;
+     display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 75vw;
+  margin-left: 12.5vw;
+  margin-right: 12.5vw;
+    }
+
+    .productlist {
+        background-color:green;
+        margin:10px;
+        height:300px;
+    }
