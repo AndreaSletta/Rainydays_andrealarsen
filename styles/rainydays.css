@@ -461,6 +461,27 @@ p {
 
 /*SINGLEPRODUCT*/
 
+.productpage {
+  width: 75vw;
+  margin-left: 12.5vw;
+  margin-right: 12.5vw;
+  background-color: indigo;
+  height: 300px;
+}
+
+.productphoto {
+  float: left;
+  width: 47.5%;
+  background: url(/images/bluefrontlong.png);
+  background-color: khaki;
+}
+
+.productinfo {
+  float: right;
+  width: 47.5%;
+  background-color: red;
+}
+
 /* CONTACT */
 
 .breadcumbsnobanner {
