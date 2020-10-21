@@ -84,6 +84,8 @@ nav a {
   font-family: din-condensed, sans-serif;
   font-weight: 500;
   font-size: 20px;
+  transition-property: color;
+  transition-duration: 0.2s;
 }
 
 nav a:hover {
@@ -105,6 +107,9 @@ nav a:hover {
 #headersearch {
   padding-left: 10px;
   padding-right: 10px;
+  top: 0px;
+  right: 100px;
+  position: absolute;
 }
 
 #headercart img,
@@ -112,6 +117,30 @@ nav a:hover {
   height: 30px;
 }
 
+#searchlabel {
+  margin-right: 10px;
+
+  position: absolute;
+}
+
+#searchinput {
+  display: none;
+}
+#search {
+  visibility: hidden;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  right: 40px;
+  transition: 0.2s;
+  border: 2px solid #0a3641;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked + input#search {
+  visibility: visible;
+  width: 100px;
+}
 /* INDEX */
 
 #indexbackground {
@@ -149,6 +178,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
 .orangebutton p {
@@ -166,6 +197,7 @@ nav a:hover {
   height: 3vw;
   z-index: 1;
   right: 10vw;
+  background-color: darkcyan;
 }
 
 #scrolldownbutton img {
