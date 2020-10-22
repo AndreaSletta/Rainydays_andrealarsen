@@ -197,7 +197,6 @@ input[type="checkbox"]:checked + input#search {
   height: 3vw;
   z-index: 1;
   right: 10vw;
-  background-color: darkcyan;
 }
 
 #scrolldownbutton img {
@@ -797,4 +796,115 @@ form label {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/* CART */
+
+#carttitle {
+  width: 75vw;
+  margin-left: 12.5vw;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid#0d738c;
+}
+
+#carttitle h2 {
+  flex-grow: 4;
+  text-align: center;
+}
+
+.cartproduct {
+  width: 75vw;
+  margin-left: 12.5vw;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid#0d738c;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.cartimage {
+  flex-grow: 1;
+  display: inline-block;
+  border: #0d738c solid 2px;
+  height: 7vw;
+  margin-right: 15px;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+}
+
+.cartimage img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  margin: auto;
+}
+
+.cartprice {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  border: #0d738c solid 2px;
+  margin-right: 15px;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+}
+
+.cartquantity {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  border: #0d738c solid 2px;
+  margin-right: 15px;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  position: relative;
+  display: inline-flex;
+  margin: auto;
+  width: 10vw;
+}
+
+.number-input button {
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  margin: auto;
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.plus img,
+.minus img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+}
+
+.number-input input[type="number"] {
+  width: 2vw;
+  height: 2vw;
+  border: #0d738c solid 2px;
+  border-radius: 3px;
+  background-color: transparent;
+  text-align: center;
+  margin: auto;
 }
