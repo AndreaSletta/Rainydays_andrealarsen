@@ -35,7 +35,8 @@ a {
 
 header {
   background-color: white;
-  text-align: center;
+  display: flex;
+  margin: auto;
   height: 70px;
   position: fixed;
   width: 100vw;
@@ -46,6 +47,7 @@ header {
 header div {
   display: inline-block;
   height: 70px;
+  margin: auto;
 }
 
 #headerlogo {
@@ -61,18 +63,30 @@ header div {
 }
 
 #headernav {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  margin-left: 25vw;
+  display: flex;
+  text-align: center;
   width: 50vw;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-  display: inline-block;
-  text-transform: uppercase;
-  font-family: din-condensed, sans-serif;
-  font-weight: 500;
   font-style: normal;
+  margin: 0;
+  list-style: none;
 }
 
 nav a {
@@ -82,6 +96,7 @@ nav a {
   padding-right: 20px;
   text-transform: uppercase;
   font-family: din-condensed, sans-serif;
+  margin: auto;
   font-weight: 500;
   font-size: 20px;
   transition-property: color;
@@ -102,10 +117,9 @@ nav a:hover {
 
 #headercart {
   padding-left: 10px;
-  padding-right: 50px;
+  margin-right: 50px;
 }
 #headersearch {
-  padding-left: 10px;
   padding-right: 10px;
   top: 0px;
   right: 100px;
@@ -115,11 +129,11 @@ nav a:hover {
 #headercart img,
 #headersearch img {
   height: 30px;
+  cursor: pointer;
 }
 
 #searchlabel {
   margin-right: 10px;
-
   position: absolute;
 }
 
@@ -251,7 +265,7 @@ input[type="checkbox"]:checked + input#search {
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
   width: 100vw;
   text-align: center;
@@ -505,6 +519,59 @@ p {
   width: 90%;
   float: left;
 }
+/* Here's where our carousel begins, with the main wrapper being
+relatively positioned, so that our absolutely positioned items are
+in the right place. */
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  background-color: #f2f2f2;
+}
+
+.carousel-item img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 100%;
+}
+
+.arrow-prev {
+  left: 0;
+}
+
+.arrow-next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.arrow {
+  background-color: aquamarine;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+}
+
+#target-item-2:target ~ .item-2,
+#target-item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
 
 .frontimage {
   height: 40vw;
@@ -686,6 +753,7 @@ input[type="checkbox"]:checked ~ .dropdownproduct-content {
 .breadcumbsnobanner {
   margin-left: 5vw;
   margin-top: 70px;
+  padding-bottom: 3vw;
 }
 
 .breadcumbsnobanner ul {
@@ -824,13 +892,22 @@ form label {
 }
 
 .cartimage {
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   flex-grow: 1;
-  display: inline-block;
+  margin-right: 15px;
+  flex: 1 1 0px;
+}
+
+.cartimagediv {
   border: #0d738c solid 2px;
   height: 7vw;
-  margin-right: 15px;
+  width: 7vw;
+  margin: auto;
+  margin-right: 1vw;
   border-radius: 2px;
-  background-color: #f2f2f2;
+  float: left;
 }
 
 .cartimage img {
@@ -841,6 +918,19 @@ form label {
   margin: auto;
 }
 
+.carttext {
+  float: left;
+  margin: auto;
+}
+
+.carttext h2 {
+  margin: auto;
+}
+
+.carttext p {
+  margin: 5px 0px;
+}
+
 .cartprice {
   display: flex;
   justify-content: center;
@@ -848,10 +938,8 @@ form label {
   flex-direction: column;
   flex-grow: 1;
   text-align: center;
-  border: #0d738c solid 2px;
   margin-right: 15px;
-  border-radius: 2px;
-  background-color: #f2f2f2;
+  flex: 1 1 0px;
 }
 
 .cartquantity {
@@ -861,10 +949,8 @@ form label {
   flex-direction: column;
   flex-grow: 1;
   text-align: center;
-  border: #0d738c solid 2px;
   margin-right: 15px;
-  border-radius: 2px;
-  background-color: #f2f2f2;
+  flex: 1 1 0px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -907,4 +993,247 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: transparent;
   text-align: center;
   margin: auto;
+}
+
+.carttotal {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  flex: 1 1 0px;
+}
+
+.subtotal {
+  width: 75vw;
+  margin-left: 12.5vw;
+  border-bottom: 2px solid#0d738c;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  text-align: right;
+}
+
+.subtotal h2,
+.subtotal p {
+  display: inline;
+  margin-right: 3vw;
+  text-align: right;
+}
+
+.cartsubmit {
+  margin-top: 3vw;
+  float: right;
+  margin-right: 12.5vw;
+  background-color: #0d738c;
+  padding: 5px;
+  border-radius: 3px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+.cartsubmit:hover {
+  background-color: #8c4300;
+}
+
+/* CHECK OUT */
+
+.checkoutcolumns {
+  display: flex;
+  flex-direction: row;
+  width: 75vw;
+  margin-left: 12.5vw;
+}
+
+.shippinginfo {
+  width: 50%;
+  margin-right: 4vw;
+}
+
+#blueline {
+  width: 2px;
+  background-color: #0d738c;
+}
+
+.paymentinfo {
+  width: 45%;
+  margin-left: 4vw;
+}
+
+.shippinginfo h2,
+.paymentinfo h2 {
+  margin-bottom: 35px;
+  color: #0a3641;
+}
+
+#expiration {
+  margin-top: -25px;
+  margin-left: 5%;
+  color: #0a3641;
+}
+
+.longtextboxwrap {
+  display: flex;
+  width: 90%;
+  margin: 35px 5%;
+}
+
+.longtextbox {
+  flex-grow: 1;
+  border: 2px solid#0d738c;
+  border-radius: 3px;
+  margin: 0;
+  height: 35px;
+  padding-left: 10px;
+}
+
+.smalltextboxwrap {
+  display: flex;
+  width: 90%;
+  margin: 35px 5%;
+  justify-content: space-between;
+  border: 2px solid #0d738c;
+  border-radius: 3px;
+}
+
+.smalltextbox {
+  border-right: 2px solid#0d738c;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  height: 35px;
+  width: 33.33%;
+  padding-left: 10px;
+}
+
+.smalltextbox:last-child {
+  border-right: none;
+}
+
+.bottomborder {
+  border-bottom: 2px solid#0d738c;
+  width: 90%;
+  margin: 35px 5%;
+}
+
+#paypal {
+  background-color: #0d738c;
+  border-radius: 2px;
+  padding: 5px;
+  width: 89%;
+  height: 30px;
+  margin: 25px 5%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-appearance: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+#paypal:hover {
+  background-color: #8c4300;
+}
+
+#paypal a {
+  text-transform: uppercase;
+  color: white;
+}
+
+.thermsandconditions {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 91%;
+  margin-left: 5%;
+  margin-top: 7px;
+}
+
+.checkboxcontainer {
+  border-radius: 2px;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.checkboxcontainer input {
+  display: none;
+}
+
+.checkmark {
+  border: 2px solid#0d738c;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #0d738c;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.thermsandconditions p {
+  margin: 0 10px;
+}
+
+.therms {
+  color: black;
+  text-decoration: underline !important;
+}
+
+#submitorder {
+  display: inline-flex;
+  background-color: #0d738c;
+  border-radius: 3px;
+  width: 340px !important;
+  height: 25px;
+  padding: 5px;
+  margin-left: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+#submitorder:hover {
+  background-color: #8c4300;
 }
