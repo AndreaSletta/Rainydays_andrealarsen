@@ -41,7 +41,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0pt;
-  z-index: 2;
+  z-index: 5;
 }
 
 header div {
@@ -337,6 +337,8 @@ footer {
   font-style: normal;
   font-size: 20px;
   color: #0a3641;
+  transition-property: color;
+  transition-duration: 0.2s;
 }
 
 .breadcumbs li + li:before {
@@ -416,6 +418,8 @@ footer {
   font-size: 20px;
   font-weight: 400;
   color: #0a3641;
+  transition-property: color, background-color;
+  transition-duration: 0.2s;
 }
 
 .dropdown-content a:hover {
@@ -519,9 +523,6 @@ p {
   width: 90%;
   float: left;
 }
-/* Here's where our carousel begins, with the main wrapper being
-relatively positioned, so that our absolutely positioned items are
-in the right place. */
 
 .carousel-wrapper {
   position: relative;
@@ -534,6 +535,13 @@ in the right place. */
   background-color: #f2f2f2;
 }
 
+#target-item-1 {
+  display: none;
+}
+#target-item-2 {
+  display: none;
+}
+
 .carousel-item img {
   height: auto;
   width: 100%;
@@ -543,23 +551,33 @@ in the right place. */
 .arrow {
   position: absolute;
   top: 0;
-  display: block;
-  width: 50px;
+  display: flex;
+  width: 3vw;
   height: 100%;
 }
 
-.arrow-prev {
-  left: 0;
+.arrow-prev img {
+  display: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  background-color: transparent;
+}
+
+.arrow-next img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  background-color: transparent;
 }
 
 .arrow-next {
   right: 0;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-
-.arrow {
-  background-color: aquamarine;
 }
 
 .item-1 {
@@ -605,6 +623,9 @@ in the right place. */
   margin-right: 15px;
   border-radius: 2px;
   background-color: #f2f2f2;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.2s;
 }
 
 .colorselection:hover {
@@ -616,6 +637,9 @@ in the right place. */
   width: auto;
   display: block;
   margin: auto;
+}
+#jacketborder {
+  border: #0d738c solid 3px;
 }
 
 #sizeoptions {
@@ -637,6 +661,8 @@ in the right place. */
   background-color: #f2f2f2;
   border: #f2f2f2 solid 3px;
   color: black;
+  transition-property: all;
+  transition-duration: 0.2s;
 }
 
 #sizeoptions p {
@@ -667,6 +693,8 @@ in the right place. */
   position: relative;
   display: inline-block;
   border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
 .addtocart p {
@@ -771,6 +799,8 @@ input[type="checkbox"]:checked ~ .dropdownproduct-content {
   font-style: normal;
   font-size: 20px;
   color: #0a3641;
+  transition-property: color;
+  transition-duration: 0.2s;
 }
 
 .breadcumbsnobanner li + li:before {
@@ -819,16 +849,25 @@ form label {
 }
 
 .submit {
-  width: 30%;
-  height: 30px;
-  float: right;
+  padding: 5px;
   border-radius: 3px;
-  border: 2px solid #0d738c;
+  height: 40px;
+  width: 160px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 0.2s;
   background-color: #0d738c;
   color: white;
   text-transform: uppercase;
   font-size: 13px;
   margin-right: -10px;
+  float: right;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
 .submit:hover {
@@ -1028,8 +1067,8 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #0d738c;
   padding: 5px;
   border-radius: 3px;
+  height: 40px;
   width: 160px;
-  height: 30px;
   text-align: center;
   display: flex;
   justify-content: center;
