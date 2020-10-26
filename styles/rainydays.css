@@ -1602,7 +1602,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .dropbtn {
-    width: 17vw;
+    width: 22vw;
     text-align: left;
     font-size: 15px;
   }
@@ -1637,7 +1637,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .productlist h2,
   p {
-    line-height: 10px;
+    line-height: 15vw;
   }
 
   #nextpage {
