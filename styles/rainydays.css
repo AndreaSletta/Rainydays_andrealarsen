@@ -1730,4 +1730,24 @@ input[type="number"]::-webkit-outer-spin-button {
   .blueunderline {
     width: 80vw;
   }
+
+  /* CONTACT */
+
+  form {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .name,
+  .subject {
+    width: 80vw;
+  }
+
+  .textarea {
+    width: 80vw;
+    height: 150px;
+  }
 }
