@@ -1363,6 +1363,8 @@ input[type="number"]::-webkit-outer-spin-button {
 /*PHONE SCREEN*/
 
 @media only screen and (max-width: 768px) {
+  /* NAVIGATION*/
+
   header {
     display: none;
   }
@@ -1388,14 +1390,14 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #headerlogo img {
-    height: 40px;
+    height: 35px;
     width: auto;
   }
 
   #headercart {
     height: 30px;
     position: absolute;
-    right: 50px;
+    right: 20px;
     margin: auto;
     z-index: 7;
   }
@@ -1403,7 +1405,7 @@ input[type="number"]::-webkit-outer-spin-button {
   #searchlabel {
     height: 30px;
     position: absolute;
-    right: 0px;
+    right: -40px;
     top: 10px;
     margin: auto;
     z-index: 7;
@@ -1419,6 +1421,7 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 10px;
     height: 25px;
     z-index: 6;
+    right: -5px;
   }
 
   input[type="checkbox"]:checked + input#search {
@@ -1426,16 +1429,16 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100px;
     position: absolute;
     top: 10px;
+    right: -5px;
     height: 25px;
     z-index: 6;
   }
 
   #hamburgerlabel {
-    height: 30px;
+    height: 25px;
     position: absolute;
     left: 20px;
     margin: 0;
-    margin-top: 5px;
     z-index: 7;
     display: flex;
     flex-direction: column;
@@ -1485,11 +1488,11 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .change #span1 {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(8px, 7px);
   }
 
   .change #span3 {
-    transform: rotate(-45deg) translate(10px, -8px);
+    transform: rotate(-45deg) translate(9px, -7px);
   }
 
   nav ul {
@@ -1501,5 +1504,38 @@ input[type="number"]::-webkit-outer-spin-button {
 
   nav ul li {
     padding: 10px;
+  }
+
+  /* INDEX */
+  h1 {
+    font-size: 10vw;
+    line-height: 12vw;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  #indexbackgroundtext {
+    position: absolute;
+    bottom: 40vw;
+    width: 70vw;
+    height: auto;
+    z-index: 1;
+    left: 10vw;
+    margin: 0;
+    color: white;
+  }
+
+  #scrolldownbutton {
+    position: absolute;
+    bottom: 70px;
+    width: 9vw;
+    height: 9vw;
+    z-index: 1;
+    left: 10vw;
+  }
+
+  #scrolldownbutton img {
+    height: 100%;
+    width: 100%;
   }
 }
