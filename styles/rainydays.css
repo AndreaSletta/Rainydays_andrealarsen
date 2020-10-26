@@ -1777,13 +1777,112 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #abouttext p {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   #founderimage {
     width: 80vw;
-    height: 50vw;
+    height: 40vw;
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  /* CART */
+
+  #carttitle {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
+  #carttitle h2 {
+    flex-grow: 4;
+    text-align: center;
+  }
+
+  .cartproduct {
+    width: 80vw;
+    margin-left: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  .cartimagediv {
+    height: 20vw;
+    width: 100%;
+  }
+
+  .carttext {
+    margin-top: 20px;
+  }
+
+  .number-input {
+    width: auto;
+  }
+
+  .number-input button {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .number-input input[type="number"] {
+    width: 5vw;
+    height: 5vw;
+    border: #0d738c solid 2px;
+    border-radius: 3px;
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
+  }
+
+  .carttotal {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    flex: 1 1 0px;
+  }
+
+  .subtotal {
+    width: 75vw;
+    margin-left: 12.5vw;
+    border-bottom: 2px solid#0d738c;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    text-align: right;
+  }
+
+  .subtotal h2,
+  .subtotal p {
+    display: inline;
+    margin-right: 3vw;
+    text-align: right;
+  }
+
+  .cartsubmit {
+    margin-top: 3vw;
+    float: right;
+    margin-right: 12.5vw;
+    background-color: #0d738c;
+    padding: 5px;
+    border-radius: 3px;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+    -webkit-appearance: none;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+  }
+
+  .cartsubmit:hover {
+    background-color: #8c4300;
   }
 }
