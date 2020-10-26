@@ -930,16 +930,16 @@ form label {
 }
 
 #aboutinfo {
-  width: 84vw;
-  margin-left: 8vw;
-  display: flex;
+  position: relative;
+  width: 75vw;
+  margin-left: 12.5vw;
   margin-top: 50px;
   padding-bottom: 50px;
 }
 
 #abouttext {
-  flex: 1.5;
-  margin-right: 50px;
+  float: none;
+  font-family: ff-basic-gothic-pro, sans-serif !important;
 }
 
 #abouttext p {
@@ -949,7 +949,11 @@ form label {
 }
 
 #founderimage {
-  flex: 1;
+  width: 29vw;
+  height: 29vw;
+  float: right;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 #founderimage img {
@@ -1753,9 +1757,5 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .submit {
     -webkit-appearance: none;
-  }
-
-  .submit:hover {
-    background-color: #8c4300;
   }
 }
