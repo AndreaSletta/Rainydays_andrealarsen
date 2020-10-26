@@ -1,5 +1,8 @@
 body {
-  margin: 0pt;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden !important;
 }
 h1,
 h2,
@@ -31,7 +34,7 @@ a {
   text-decoration: none !important;
 }
 
-/* HEADER */
+/* HEADER DESKTOP */
 
 header {
   background-color: white;
@@ -42,6 +45,7 @@ header {
   width: 100vw;
   top: 0pt;
   z-index: 5;
+  overflow: hidden;
 }
 
 header div {
@@ -155,11 +159,12 @@ input[type="checkbox"]:checked + input#search {
   visibility: visible;
   width: 100px;
 }
+
 /* INDEX */
 
 #indexbackground {
   position: relative;
-  background-color: gray;
+  background-color: red;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -186,8 +191,8 @@ input[type="checkbox"]:checked + input#search {
   background-color: #8c4300;
   padding: 5px;
   border-radius: 3px;
+  height: 40px;
   width: 160px;
-  height: 30px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -258,11 +263,31 @@ input[type="checkbox"]:checked + input#search {
 }
 
 #indexcarousel {
+  display: flex;
+  flex-direction: row;
   margin-top: 90px;
   width: 100vw;
   height: 50vh;
+  justify-content: space-between;
   background-color: #0d738c;
 }
+
+.carouselimage {
+  background-color: red;
+  height: 100%;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselimage img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CAROUSEL */
 
 footer {
   margin-top: 100px;
@@ -687,7 +712,8 @@ p {
   margin: 20px 0px;
   color: white;
   background-color: #0d738c;
-  border-radius: 2px;
+  padding: 5px;
+  border-radius: 3px;
   height: 40px;
   width: 160px;
   position: relative;
@@ -875,6 +901,30 @@ form label {
 }
 
 /* ABOUT */
+
+.bannerabout {
+  position: relative;
+  width: 100vw;
+  height: 37vw;
+  overflow: hidden;
+}
+
+.bannerabout img {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bannerabout h1 {
+  position: absolute;
+  bottom: 70px;
+  width: 50vw;
+  z-index: 1;
+  left: 7vw;
+  color: #0a3641;
+  text-align: left;
+}
 
 #aboutinfo {
   width: 84vw;
@@ -1258,7 +1308,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline-flex;
   background-color: #0d738c;
   border-radius: 3px;
-  width: 340px !important;
+  width: 340px;
   height: 25px;
   padding: 5px;
   margin-left: 20px;
@@ -1275,4 +1325,41 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #submitorder:hover {
   background-color: #8c4300;
+}
+
+/*ORDER CONFIRMED*/
+
+.orderconfirm {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 300px;
+  color: #0a3641;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.orderconfirm img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.orderconfirm h3 {
+  margin: 10px;
+  font-size: 35px;
+}
+
+.orderconfirm h2 {
+  margin: 10px;
+}
+
+/*PHONE SCREEN*/
+
+@media only screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
 }
