@@ -1750,4 +1750,12 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 80vw;
     height: 150px;
   }
+
+  .submit {
+    -webkit-appearance: none;
+  }
+
+  .submit:hover {
+    background-color: #8c4300;
+  }
 }
