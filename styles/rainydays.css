@@ -1625,6 +1625,7 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-template-rows: repeat(2, 1fr);
     width: 80vw;
     margin-left: 10vw;
+    margin-top: 10vw;
   }
 
   #shopproducts a {
@@ -1632,12 +1633,15 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .productlist {
-    padding: 20px;
+    padding: 10px;
   }
 
-  .productlist h2,
+  .productlist h2 {
+    line-height: 15px;
+  }
+
   p {
-    line-height: 15vw;
+    line-height: 10px;
   }
 
   #nextpage {
