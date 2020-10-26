@@ -1817,6 +1817,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .number-input {
     width: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .number-input button {
