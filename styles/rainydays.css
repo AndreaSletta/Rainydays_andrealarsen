@@ -1660,6 +1660,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
   /* SINGLE PRODUCT PAGE*/
 
+  .breadcumbsnobanner {
+    margin-left: 0vw;
+    padding-bottom: 0vw;
+  }
+
+  .breadcumbsnobanner a {
+    margin: 0;
+  }
+
   .productpage {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1668,84 +1677,37 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     height: 130vw;
   }
-
-  .productinfo {
-    width: 100%;
-    background-color: aquamarine;
-    clear: both;
-  }
-  .productinfo h2 {
-    margin-top: 0;
+  .arrow {
+    width: 8vw;
   }
 
   .coloroptions {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .colorselection {
-    display: inline-block;
-    border: #f2f2f2 solid 3px;
-    width: 6vw;
-    height: 6vw;
-    margin-right: 15px;
-    border-radius: 2px;
-    background-color: #f2f2f2;
-    cursor: pointer;
-    transition-property: all;
-    transition-duration: 0.2s;
-  }
-
-  .colorselection:hover {
-    border: #8c4300 solid 3px;
-  }
-
-  .coloroptions img {
-    height: 100%;
-    width: auto;
-    display: block;
-    margin: auto;
-  }
-  #jacketborder {
-    border: #0d738c solid 3px;
+    width: 12vw;
+    height: 12vw;
   }
 
   #sizeoptions {
-    margin-top: 10px;
-  }
-
-  #sizeoptions input {
-    display: none;
+    margin-top: 0.83em;
   }
 
   #sizeoptions label {
     border-radius: 2px;
     margin-right: 15px;
-    display: inline-block;
-    width: 5vw;
-    height: 1.5vw;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #f2f2f2;
-    border: #f2f2f2 solid 3px;
-    color: black;
-    transition-property: all;
-    transition-duration: 0.2s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7vw;
+    height: 3vw;
   }
 
   #sizeoptions p {
-    margin: auto;
-  }
-
-  #sizeoptions label:hover {
-    border: #8c4300 solid 3px;
-  }
-
-  #size_xs:checked + label,
-  #size_s:checked + label,
-  #size_m:checked + label,
-  #size_l:checked + label,
-  #size_xl:checked + label {
-    border: #0d738c solid 3px;
+    margin: 0;
   }
 
   .addtocart {
