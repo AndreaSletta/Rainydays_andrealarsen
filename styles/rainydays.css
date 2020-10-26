@@ -1379,10 +1379,17 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #headerlogo {
-    background-color: rosybrown;
-    margin: 0;
-    padding: 10px;
     height: 50px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #headerlogo img {
+    height: 40px;
+    width: auto;
   }
 
   #headercart {
@@ -1406,32 +1413,35 @@ input[type="number"]::-webkit-outer-spin-button {
     display: none;
   }
 
+  #search {
+    width: 0px;
+    position: absolute;
+    top: 10px;
+    height: 25px;
+    z-index: 6;
+  }
+
   input[type="checkbox"]:checked + input#search {
     visibility: visible;
     width: 100px;
     position: absolute;
-    top: 0;
+    top: 10px;
+    height: 25px;
     z-index: 6;
   }
 
   #hamburgerlabel {
     height: 30px;
     position: absolute;
-    right: 0;
-    margin: auto;
+    left: 20px;
+    margin: 0;
+    margin-top: 5px;
     z-index: 7;
+    display: flex;
+    flex-direction: column;
   }
 
-  #hamburgerlabel img {
-    height: 100%;
-    cursor: pointer;
-    object-fit: cover;
-  }
-
-  #hamburgermenu {
-    display: none;
-  }
-
+  #hamburgermenu,
   nav {
     display: none;
   }
@@ -1439,16 +1449,57 @@ input[type="number"]::-webkit-outer-spin-button {
   #hamburgermenu:checked ~ nav {
     display: flex;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
-    padding: 30px;
-    width: auto;
     flex-direction: column;
-    background-color: slateblue;
+    background-color: white;
+    margin-top: 50px;
+    width: 100vw;
+    transition-property: all;
+    transition-duration: 0.2s;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 40px;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  span {
+    height: 3px;
+    width: 30px;
+    background-color: #0a3641;
+    border-radius: 3px;
+    transition: all;
+    transition: 0.4s;
+    position: relative;
+    display: inline-flex;
+  }
+  .change #span2 {
+    display: none;
+  }
+
+  .change #span1 {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  .change #span3 {
+    transform: rotate(-45deg) translate(10px, -8px);
   }
 
   nav ul {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li {
+    padding: 10px;
   }
 }
