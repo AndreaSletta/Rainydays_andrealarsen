@@ -1758,4 +1758,32 @@ input[type="number"]::-webkit-outer-spin-button {
   .submit {
     -webkit-appearance: none;
   }
+
+  /* ABPUT */
+
+  .bannerabout {
+    padding-top: 70px;
+  }
+
+  .bannerabout h1 {
+    bottom: 5vw;
+  }
+
+  #aboutinfo {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  #abouttext p {
+    margin-bottom: 10px;
+  }
+
+  #founderimage {
+    width: 80vw;
+    height: 40vw;
+    padding: 0;
+    margin-bottom: 10px;
+  }
 }
