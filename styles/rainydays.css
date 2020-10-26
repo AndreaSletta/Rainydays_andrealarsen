@@ -1874,4 +1874,19 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     margin: 0;
   }
+
+  .checkmark {
+    background-color: white;
+  }
+
+  .thermsandconditions p {
+    position: absolute;
+    left: 12vw;
+    margin-top: 50px;
+    width: 50vw;
+  }
+
+  #submitorder {
+    width: 50%;
+  }
 }
