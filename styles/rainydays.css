@@ -36,6 +36,10 @@ a {
 
 /* HEADER DESKTOP */
 
+#headerphone {
+  display: none;
+}
+
 header {
   background-color: white;
   display: flex;
@@ -164,7 +168,6 @@ input[type="checkbox"]:checked + input#search {
 
 #indexbackground {
   position: relative;
-  background-color: red;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -1362,5 +1365,90 @@ input[type="number"]::-webkit-outer-spin-button {
 @media only screen and (max-width: 768px) {
   header {
     display: none;
+  }
+  #headerphone {
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    z-index: 5;
+  }
+
+  #headerlogo {
+    background-color: rosybrown;
+    margin: 0;
+    padding: 10px;
+    height: 50px;
+  }
+
+  #headercart {
+    height: 30px;
+    position: absolute;
+    right: 50px;
+    margin: auto;
+    z-index: 7;
+  }
+
+  #searchlabel {
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    margin: auto;
+    z-index: 7;
+  }
+
+  #searchinputphone {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + input#search {
+    visibility: visible;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 6;
+  }
+
+  #hamburgerlabel {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    z-index: 7;
+  }
+
+  #hamburgerlabel img {
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+  }
+
+  #hamburgermenu {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #hamburgermenu:checked ~ nav {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 30px;
+    width: auto;
+    flex-direction: column;
+    background-color: slateblue;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
   }
 }
