@@ -792,7 +792,6 @@ input[type="checkbox"]:checked ~ .dropdownproduct-content {
 .dropdownproduct-content {
   display: none;
   width: auto;
-  background-color: burlywood;
 }
 
 #check02:checked ~ label img {
@@ -1671,6 +1670,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .productpage {
     grid-template-columns: repeat(1, 1fr);
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   .productphoto {
@@ -1688,8 +1690,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .colorselection {
-    width: 12vw;
-    height: 12vw;
+    width: 14vw;
+    height: 14vw;
   }
 
   #sizeoptions {
@@ -1702,107 +1704,30 @@ input[type="number"]::-webkit-outer-spin-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 7vw;
-    height: 3vw;
+    width: 8vw;
+    height: 5vw;
   }
 
   #sizeoptions p {
     margin: 0;
   }
 
-  .addtocart {
-    text-transform: uppercase;
-    font-size: 16px;
-    margin: 20px 0px;
-    color: white;
-    background-color: #0d738c;
-    padding: 5px;
-    border-radius: 3px;
-    height: 40px;
-    width: 160px;
-    position: relative;
-    display: inline-block;
-    border: none;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-  }
-
-  .addtocart p {
-    font-weight: 500;
-    float: left;
-    margin: 5px 0px 0px 7px;
-  }
-
-  .addtocartimg {
-    margin: 2px 0px 0px 0px;
-    width: 20px;
-    height: 20px;
-    float: right;
-    padding: 3px 10px;
-  }
-
-  .addtocartimg img {
-    height: 20px;
-    width: 20px;
-    object-fit: cover;
-  }
-
-  .addtocart:hover {
-    background-color: #8c4300;
-  }
-
-  .dropdownproduct {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdownproduct h2 {
-    width: 100px;
-    margin-bottom: -20px;
+  .produchelp {
+    margin-top: 20px;
   }
 
   .dropdownproduct img {
-    width: 20px;
-    height: 20px;
-    margin-left: 34vw;
-    padding: 3px 10px;
-    object-fit: cover;
-    -webkit-transition: -webkit-transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  #check01,
-  #check02 {
-    display: none;
-  }
-
-  #check01:checked,
-  #check02:checked ~ .remove-check {
-    display: none;
-  }
-
-  #check01:checked ~ label img {
-    transform: rotate(-180deg);
-  }
-
-  input[type="checkbox"]:checked ~ .dropdownproduct-content {
-    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    right: -35vw;
   }
 
   .dropdownproduct-content {
-    display: none;
-    width: auto;
-    background-color: burlywood;
-  }
-
-  #check02:checked ~ label img {
-    transform: rotate(-180deg);
+    width: 80vw;
   }
 
   .blueunderline {
-    width: 40vw;
-    height: 1px;
-    margin: 20px 0px;
-    border-bottom: 2px solid#0d738c;
+    width: 80vw;
   }
 }
