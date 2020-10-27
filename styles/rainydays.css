@@ -1448,11 +1448,11 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #hamburgermenu,
-  nav {
+  #navburger {
     display: none;
   }
 
-  #hamburgermenu:checked ~ nav {
+  #hamburgermenu:checked ~ #navburger {
     display: flex;
     position: absolute;
     left: 0;
@@ -1498,15 +1498,39 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: rotate(-45deg) translate(9px, -7px);
   }
 
-  nav ul {
+  #navburger ul {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
   }
 
-  nav ul li {
+  #navburger ul li {
     padding: 10px;
+    font-style: normal;
+    list-style: none;
+  }
+
+  #navburger a {
+    color: #0a3641;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    font-family: din-condensed, sans-serif;
+    margin: auto;
+    font-weight: 500;
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: 0.2s;
+  }
+
+  #navburger a:hover {
+    color: #8c4300;
   }
 
   /* INDEX */
