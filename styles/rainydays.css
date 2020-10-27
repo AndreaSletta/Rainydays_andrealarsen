@@ -1889,4 +1889,16 @@ input[type="number"]::-webkit-outer-spin-button {
   #submitorder {
     width: 50%;
   }
+
+  /*ORDER CONFIRMED*/
+
+  .orderconfirm {
+    height: auto;
+    margin-top: 10vw;
+  }
+
+  .orderconfirm img {
+    width: 100px;
+    margin-bottom: 40px;
+  }
 }
