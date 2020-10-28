@@ -264,34 +264,66 @@ input[type="checkbox"]:checked + input#search {
   width: 100%;
   object-fit: cover;
 }
-
+/* CAROUSEL */
 #indexcarousel {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-top: 90px;
   width: 100vw;
   overflow: hidden;
-  height: 50vh;
-  justify-content: space-between;
+  height: 500px;
+  justify-content: space-around;
   background-color: #0d738c;
 }
 
+.carouselcontent {
+  background-color: white;
+  height: 80%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
 .carouselimage {
-  background-color: red;
-  height: 100%;
-  width: 30vw;
+  width: 100%;
+  height: 90%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .carouselimage img {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* CAROUSEL */
+.carouselcontent a{
+  background-color:  #0d738c;
+  color: white;
+  margin-top: -35px;
+  padding: 5px;
+  border-radius: 3px;
+  height: 40px;
+  width: 160px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+
+.carouselcontent a:hover {
+  background-color: #8c4300;
+}
+
+
+
+
 
 footer {
   margin-top: 100px;
@@ -1533,6 +1565,13 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #8c4300;
   }
 
+  
+  #footerlogo {
+    height: 70px;
+    width: 170px;
+  }
+ 
+
   /* INDEX */
   h1 {
     font-size: 10vw;
@@ -1597,6 +1636,55 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     object-fit: cover;
   }
+
+#indexcarousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 90px;
+  width: 100vw;
+  overflow: hidden;
+  height: 80vw;
+  justify-content: space-around;
+  background-color: #0d738c;
+}
+
+.carouselcontent:last-child {
+display: none;
+}
+  
+
+.carouselcontent {
+  background-color: white;
+  height: 80%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.carouselimage {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.carouselimage img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.carouselcontent a{
+  margin-top:-10%;
+  padding: 5px;
+  height: 10%;
+  width: 70%;
+}
+
+
 
   /* SHOP*/
 
@@ -1783,7 +1871,7 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
 
-  /* ABPUT */
+  /* ABOUT */
 
   .bannerabout {
     padding-top: 70px;
@@ -1846,8 +1934,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .number-input button {
-    width: 12vw;
-    height: 12vw;
+    width: 45px;
+    height: 45px;
     margin: 0;
   }
 
