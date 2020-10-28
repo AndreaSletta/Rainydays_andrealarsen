@@ -265,11 +265,24 @@ input[type="checkbox"]:checked + input#search {
   object-fit: cover;
 }
 /* CAROUSEL */
+
+#carouseltitle{
+  margin-top: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  color: #0d738c;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 #indexcarousel {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 20px;
   width: 100vw;
   overflow: hidden;
   height: 500px;
@@ -326,32 +339,56 @@ input[type="checkbox"]:checked + input#search {
 
 
 footer {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin: 50px 0 50px 0;
   width: 100vw;
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #0a3641;
 }
 
 #footerlogo {
+  margin: 0;
   height: 100px;
-  width: 200px;
   position: relative;
 }
 
 #footerlogo img {
-  height: auto;
-  width: 100%;
+  width: auto;
+  height: 100%;
   object-fit: cover;
 }
 
+.footeralign {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
 .footeralign img {
-  float: left;
   width: 2vw;
   height: 2vw;
 }
+
+.footeralign h3 {
+  margin: 0;
+}
+
+#footeremail {
+  display: flex;
+  flex-direction:row-reverse;
+  background-color: #0a3641;
+  border-radius: 3px;
+  color: white;
+  margin: 0;
+}
+#footeremail p {
+  margin:5px 10px;
+}
+
 
 /* SHOP */
 
@@ -901,12 +938,14 @@ form label {
 }
 
 .textarea {
+  padding-top: 10px;
   width: 50vw;
   height: 300px;
   border-radius: 3px;
   border: 2px solid#0d738c;
   margin-bottom: 10px;
   font-size: 13px;
+  font-family: ff-basic-gothic-pro, sans-serif !important;
 }
 
 .submit {
@@ -1566,9 +1605,15 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   
+  
   #footerlogo {
     height: 70px;
-    width: 170px;
+  }
+
+  .footeralign img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
   }
  
 
@@ -1582,19 +1627,29 @@ input[type="number"]::-webkit-outer-spin-button {
 
   #indexbackgroundtext {
     position: absolute;
-    bottom: 50vw;
+    bottom: 150px;
     width: 70vw;
     height: auto;
     z-index: 1;
     left: 10vw;
     margin: 0;
     color: white;
+
   }
+
+
+  .orangebutton {
+  
+    height: 35px;
+    width: 100px;
+   
+  }
+  
 
   #scrolldownbutton {
     position: absolute;
-    bottom: 30vw;
-    width: 9vw;
+    bottom: 80px;
+    width: 30px;
     height: 9vw;
     z-index: 1;
     left: 10vw;
@@ -1637,11 +1692,21 @@ input[type="number"]::-webkit-outer-spin-button {
     object-fit: cover;
   }
 
+#carouseltitle{
+  margin-top: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  color: #0d738c;
+  text-align: center;
+  text-transform: uppercase;
+}
 #indexcarousel {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 20px;
   width: 100vw;
   overflow: hidden;
   height: 80vw;
