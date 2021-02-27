@@ -1,2 +1,2 @@
-# file_organising
-Organising files for upcoming web project
+# Rainy days website
+By Andrea Sletta Larsen
