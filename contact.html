@@ -70,7 +70,7 @@
           ><img src="images/icons/searchicon.png" alt="Search icon"
         /></label>
         <input name="search" type="checkbox" id="searchinputphone" />
-        <input type="text" id="search" autofocus="true" />
+        <input type="text" id="text" autofocus="true" />
       </div>
       <div id="headercart">
         <a href="cart.html">
@@ -113,21 +113,29 @@
           placeholder="Your name.."
           class="name"
         />
+        <div class="form-error" id="nameError">Please enter your name.</div>
         <label for="subject">Subject</label>
         <input
-          type="text"
+          type="email"
           id="subject"
           name="subject"
           placeholder="Your email.."
           class="subject"
         />
+        <div class="form-error" id="subjectError">
+          Please enter a valid email.
+        </div>
+
         <textarea
           id="textarea"
           name="textarea"
           placeholder="Write something.."
           class="textarea"
         ></textarea>
-        <input type="submit" value="Submit" class="submit" />
+        <div class="form-error" id="textareaError">
+          Please write your inquery.
+        </div>
+        <button name="submitform" type="button" class="submit">Submit</button>
       </form>
     </main>
     <footer>
