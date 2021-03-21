@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/msh8obx.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/rainydays.js"></script>
+    <script src="js/checkoutform.js"></script>
     <!-- Hotjar Tracking Code for https://andreaslettarainydays.netlify.app -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -55,7 +56,7 @@
           ><img src="images/icons/searchicon.png" alt="Search icon"
         /></label>
         <input name="search" type="checkbox" id="searchinput" />
-        <input type="text" id="search" autofocus="true" />
+        <input type="text" class="search" autofocus="true" />
       </div>
     </header>
     <div id="headerphone">
@@ -70,7 +71,7 @@
           ><img src="images/icons/searchicon.png" alt="Search icon"
         /></label>
         <input name="search" type="checkbox" id="searchinputphone" />
-        <input type="text" id="search" autofocus="true" />
+        <input type="text" class="search" autofocus="true" />
       </div>
       <div id="headercart">
         <a href="cart.html">
@@ -103,103 +104,175 @@
           <li><a href="checkout.html">Check Out</a></li>
         </ul>
       </div>
-      <div class="checkoutcolumns">
+      <form class="checkoutcolumns">
         <div class="shippinginfo">
           <h2>Shipping info</h2>
           <div class="longtextboxwrap">
+            <label for="fullname">Full name</label>
             <input
+              id="fullname"
               type="text"
               class="longtextbox"
               autofocus="true"
-              placeholder="Full name..."
+              placeholder="Ola Nordmann..."
             />
+            <div class="form-error" id="fullnameError">
+              Please enter your full name
+            </div>
           </div>
           <div class="smalltextboxwrap">
-            <input
-              type="text"
-              class="smalltextbox"
-              autofocus="true"
-              placeholder="Country..."
-            />
-            <input
-              type="text"
-              class="smalltextbox"
-              autofocus="true"
-              placeholder="Region..."
-            />
-            <input
-              type="text"
-              class="smalltextbox"
-              autofocus="true"
-              placeholder="Zip code..."
-            />
+            <div>
+              <label for="country">Country</label>
+              <input
+                id="country"
+                type="text"
+                class="smalltextbox"
+                autofocus="true"
+                placeholder="Norway..."
+              />
+              <div class="form-error" id="countryError">
+                Please enter your country
+              </div>
+            </div>
+            <div>
+              <label for="region">Region</label>
+              <input
+                id="region"
+                type="text"
+                class="smalltextbox"
+                autofocus="true"
+                placeholder="Rogaland..."
+              />
+              <div class="form-error" id="regionError">
+                Please enter your region
+              </div>
+            </div>
+            <div>
+              <label for="zipcode">Zip code</label>
+              <input
+                id="zipcode"
+                type="text"
+                class="smalltextbox"
+                autofocus="true"
+                placeholder="1445..."
+              />
+              <div class="form-error" id="zipcodeError">
+                Please enter your Zip code
+              </div>
+            </div>
           </div>
           <div class="longtextboxwrap">
+            <label for="address">Address</label>
             <input
+              id="address"
               type="text"
               class="longtextbox"
               autofocus="true"
-              placeholder="Street address..."
+              placeholder="Norwaystreet 55..."
             />
+            <div class="form-error" id="addressError">
+              Please enter your address
+            </div>
           </div>
           <div class="longtextboxwrap">
+            <label for="emailcheckout">Email</label>
             <input
+              id="emailcheckout"
               type="text"
               class="longtextbox"
               autofocus="true"
-              placeholder="Email address..."
+              placeholder="olanordmann@hotmail.com..."
             />
+            <div class="form-error" id="emailcheckoutError">
+              Please enter your email
+            </div>
           </div>
         </div>
         <div id="blueline"></div>
         <div class="paymentinfo">
           <h2>Payment info</h2>
           <div class="longtextboxwrap">
+            <label for="cardnumber">Card number</label>
             <input
+              id="cardnumber"
               type="text"
               class="longtextbox"
               autofocus="true"
-              placeholder="Cart number..."
+              placeholder="**** **** **** ****"
             />
+            <div class="form-error" id="cardnumberError">
+              Please enter your cardnumber
+            </div>
           </div>
 
           <div class="smalltextboxwrap">
-            <input
-              type="text"
-              class="smalltextbox"
-              autofocus="true"
-              placeholder="Month..."
-            />
-            <input
-              type="text"
-              class="smalltextbox"
-              autofocus="true"
-              placeholder="Year..."
-            />
-            <input
-              type="text"
-              class="smalltextbox"
-              autofocus="true"
-              placeholder="CVC/CW..."
-            />
+            <div>
+              <label for="cardmonth">Month</label>
+              <input
+                id="cardmonth"
+                type="text"
+                class="smalltextbox"
+                autofocus="true"
+                placeholder="05..."
+              />
+              <div class="form-error" id="cardmonthError">
+                Please enter your cards expiration date
+              </div>
+            </div>
+            <div>
+              <label for="cardyear">Year</label>
+              <input
+                id="cardyear"
+                type="text"
+                class="smalltextbox"
+                autofocus="true"
+                placeholder="25..."
+              />
+              <div class="form-error" id="cardyearError">
+                Please enter your cards expiration year
+              </div>
+            </div>
+            <div>
+              <label for="cvc">CVC/CW</label>
+              <input
+                id="cvc"
+                type="text"
+                class="smalltextbox"
+                autofocus="true"
+                placeholder="***"
+              />
+              <div class="form-error" id="cvcError">
+                Please enter your cards CVC/CW
+              </div>
+            </div>
           </div>
           <div class="bottomborder"></div>
           <div id="paypal">
-            <a href="">Pay with PayPal</a>
+            <p>Pay with PayPal</p>
           </div>
           <div class="thermsandconditions">
-            <label class="checkboxcontainer">
-              <input type="checkbox" />
+            <label for="thermscheckbox" class="checkboxcontainer">
+              <input id="thermscheckbox" type="checkbox" />
               <span class="checkmark"></span>
+              <div class="form-error" id="checkboxError">
+                Please agree to our therms and conditions before submitting your
+                order
+              </div>
+              <p>
+                I agree to the
+                <a href="" class="therms">Terms & Conditions </a> and
+                <a href="" class="therms">Privacy Policy </a> of the website.
+              </p>
             </label>
-            <p>
-              I agree to the
-              <a href="" class="therms">Terms & Conditions </a> and
-              <a href="" class="therms">Privacy Policy </a> of the website.
-            </p>
-            <a href="orderconfirm.html" id="submitorder">Submit order</a>
+
+            <button id="submitorder" type="button">Submit order</button>
           </div>
         </div>
+      </form>
+      <div class="orderconfirm">
+        <img src="images/icons/confirmicon.png" alt="Checkmark icon" />
+        <h3>Order confirmed</h3>
+        <h2>Thank you for your purchase!</h2>
       </div>
     </main>
     <footer>
@@ -219,9 +292,14 @@
         </div>
         <div class="footeralign">
           <div id="footeremail">
-            <label for="email"> <p>SIGN UP</p></label>
-            <input type="text" id="email" />
+            <button type="button" class="newsletter">
+              <label for="email" id="emailsignup"> <p>SIGN UP</p></label>
+            </button>
+            <input type="email" id="email" />
           </div>
+        </div>
+        <div class="footeralign" id="subscriptionconfirm">
+          <h3>Thank you for subscribing!</h3>
         </div>
         <h3>Copyright &copy;</h3>
       </div>

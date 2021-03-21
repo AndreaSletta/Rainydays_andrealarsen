@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/msh8obx.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/rainydays.js"></script>
+    <script src="js/productsorting.js"></script>
     <!-- Hotjar Tracking Code for https://andreaslettarainydays.netlify.app -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -55,7 +56,7 @@
           ><img src="images/icons/searchicon.png" alt="Search icon"
         /></label>
         <input name="search" type="checkbox" id="searchinput" />
-        <input type="text" id="search" autofocus="true" />
+        <input type="text" class="search" autofocus="true" />
       </div>
     </header>
     <div id="headerphone">
@@ -70,7 +71,7 @@
           ><img src="images/icons/searchicon.png" alt="Search icon"
         /></label>
         <input name="search" type="checkbox" id="searchinputphone" />
-        <input type="text" id="search" autofocus="true" />
+        <input type="text" class="search" autofocus="true" />
       </div>
       <div id="headercart">
         <a href="cart.html">
@@ -125,8 +126,10 @@
             </div>
           </button>
           <div class="dropdown-content">
-            <a href="#">Women</a>
-            <a href="#">Men</a>
+            <input type="checkbox" id="women" />
+            <label for="women"> Women </label>
+            <input type="checkbox" id="men" />
+            <label for="men"> Men </label>
           </div>
         </div>
         <div class="dropdown">
@@ -140,30 +143,13 @@
             </div>
           </button>
           <div class="dropdown-content">
-            <a href="#">New</a>
-            <a href="#">Populare</a>
-            <a href="#">Price low</a>
-            <a href="#">Price high</a>
+            <input type="checkbox" id="new" />
+            <label for="new"> New </label>
+            <input type="checkbox" id="populare" />
+            <label for="populare"> Populare </label>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Size
-            <div class="dropdownimg">
-              <img
-                src="images/icons/arrowdownblue.png"
-                alt="Arrow pointing down"
-              />
-            </div>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">XS</a>
-            <a href="#">S</a>
-            <a href="#">M</a>
-            <a href="#">L</a>
-            <a href="#">XL</a>
-          </div>
-        </div>
+        
         <div class="dropdown">
           <button class="dropbtn">
             Color
@@ -175,144 +161,117 @@
             </div>
           </button>
           <div class="dropdown-content">
-            <a href="#">Blue</a>
-            <a href="#">Black</a>
-            <a href="#">Yellow</a>
-            <a href="#">Green</a>
-            <a href="#">Red</a>
-            <a href="#">Brown</a>
-            <a href="#">Purple</a>
+            <input type="checkbox" id="blue" />
+            <label for="blue">Blue</label>
+            <input type="checkbox" id="yellow" />
+            <label for="yellow">Yellow</label>
+            <input type="checkbox" id="red" />
+            <label for="red">Red</label>
+            <input type="checkbox" id="purple" />
+            <label for="purple">Purple</label>
           </div>
         </div>
       </div>
+      <div class="filter">
+        <label for="clearfilter" id="filterlabel"> Clear filter</label>
+        <input type="checkbox" id="clearfilter"></input>
+      </div>
       <div id="shopproducts">
-        <a href="blueproduct.html">
-          <div class="productlist">
-            <img src="images/bluefrontlong.png" alt="Blue jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="blueproduct.html" class="productblue productpopulare productmen productlist">
+          <img src="images/bluefrontlong.png" alt="Blue jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="purpleproduct.html">
-          <div class="productlist">
-            <img src="images/purplefrontlong.png" alt="Purple jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="purpleproduct.html" class="productpurple productpopulare productwomen productlist">
+          <img src="images/purplefrontlong.png" alt="Purple jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="redproduct.html">
-          <div class="productlist">
-            <img src="images/redfrontlong.png" alt="Red jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="redproduct.html" class="productred productpopulare productwomen productlist">
+          <img src="images/redfrontlong.png" alt="Red jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="yellowproduct.html">
-          <div class="productlist">
-            <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="yellowproduct.html" class="productyellow productnew productwomen productlist">
+          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="blueproduct.html">
-          <div class="productlist">
-            <img src="images/bluefrontlong.png" alt="Blue jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="blueproduct.html" class="productblue productpopulare productmen productlist">
+          <img src="images/bluefrontlong.png" alt="Blue jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="purpleproduct.html">
-          <div class="productlist">
-            <img src="images/purplefrontlong.png" alt="Purple jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="purpleproduct.html" class="productpurple productnew productmen productlist">
+          <img src="images/purplefrontlong.png" alt="Purple jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="redproduct.html">
-          <div class="productlist">
-            <img src="images/redfrontlong.png" alt="Red jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="redproduct.html" class="productred productnew productwomen productlist">
+          <img src="images/redfrontlong.png" alt="Red jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="yellowproduct.html">
-          <div class="productlist">
-            <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="yellowproduct.html" class="productyellow  productpopulare productmen productlist">
+          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="blueproduct.html">
-          <div class="productlist">
-            <img src="images/bluefrontlong.png" alt="Blue jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="blueproduct.html" class="productblue productpopulare productwomen productlist">
+          <img src="images/bluefrontlong.png" alt="Blue jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="purpleproduct.html">
-          <div class="productlist">
-            <img src="images/purplefrontlong.png" alt="Purple jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="purpleproduct.html" class="productpurple productnew productwomen productlist">
+          <img src="images/purplefrontlong.png" alt="Purple jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="redproduct.html">
-          <div class="productlist">
-            <img src="images/redfrontlong.png" alt="Red jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="redproduct.html" class="productred productpopulare productwomen productlist">
+          <img src="images/redfrontlong.png" alt="Red jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="yellowproduct.html">
-          <div class="productlist">
-            <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="yellowproduct.html" class="productyellow productpopulare productwomen productlist">
+          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="blueproduct.html">
-          <div class="productlist">
-            <img src="images/bluefrontlong.png" alt="Blue jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="blueproduct.html" class="productblue productnew productmen productlist">
+          <img src="images/bluefrontlong.png" alt="Blue jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="purpleproduct.html">
-          <div class="productlist">
-            <img src="images/purplefrontlong.png" alt="Purple jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="purpleproduct.html" class="productpurple productpopulare productmen productlist">
+          <img src="images/purplefrontlong.png" alt="Purple jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="redproduct.html">
-          <div class="productlist">
-            <img src="images/redfrontlong.png" alt="Red jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="redproduct.html" class="productred productpopulare productwomen productlist">
+          <img src="images/redfrontlong.png" alt="Red jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
-        <a href="yellowproduct.html">
-          <div class="productlist">
-            <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-            <h2>Product name</h2>
-            <p>Colour</p>
-            <p>799 ,- NOK</p>
-          </div>
+        <a href="yellowproduct.html" class="productyellow productnew productwomen productlist">
+          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
+          <h2>Product name</h2>
+          <p>Colour</p>
+          <p>799 ,- NOK</p>
         </a>
       </div>
       <div id="nextpage">
@@ -339,9 +298,14 @@
         </div>
         <div class="footeralign">
           <div id="footeremail">
-            <label for="email"> <p>SIGN UP</p></label>
-            <input type="text" id="email" />
+            <button type="button" class="newsletter">
+              <label for="email" id="emailsignup"> <p>SIGN UP</p></label>
+            </button>
+            <input type="email" id="email" />
           </div>
+        </div>
+        <div class="footeralign" id="subscriptionconfirm">
+          <h3>Thank you for subscribing!</h3>
         </div>
         <h3>Copyright &copy;</h3>
       </div>

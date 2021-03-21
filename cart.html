@@ -46,7 +46,7 @@
         ><img src="images/icons/searchicon.png" alt="Search icon"
       /></label>
       <input name="search" type="checkbox" id="searchinput" />
-      <input type="text" id="search" autofocus="true" />
+      <input type="text" class="search" autofocus="true" />
     </div>
   
     </header>
@@ -62,7 +62,7 @@
         ><img src="images/icons/searchicon.png" alt="Search icon"
       /></label>
       <input name="search" type="checkbox" id="searchinputphone" />
-      <input type="text" id="search" autofocus="true" />
+      <input type="text" class="search" autofocus="true" />
     </div>
     <div id="headercart">
       <a href="cart.html">
@@ -178,9 +178,14 @@
         </div>
         <div class="footeralign">
           <div id="footeremail">
-            <label for="email"> <p>SIGN UP</p></label>
-            <input type="text" id="email" />
+            <button type="button" class="newsletter">
+              <label for="email" id="emailsignup"> <p>SIGN UP</p></label>
+            </button>
+            <input type="email" id="email" />
           </div>
+        </div>
+        <div class="footeralign" id="subscriptionconfirm">
+          <h3>Thank you for subscribing!</h3>
         </div>
         <h3>Copyright &copy;</h3>
       </div>
