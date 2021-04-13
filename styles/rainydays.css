@@ -609,6 +609,14 @@ footer {
   color: black;
 }
 
+/* New from API call*/
+
+.product img {
+  width: 100%;
+}
+
+/* API call end*/
+
 .productlist {
   position: relative;
   padding: 40px;
