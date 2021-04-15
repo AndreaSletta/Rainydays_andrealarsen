@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rainy Days</title>
+    <title>Rainy Days - Red rain coat</title>
     <meta
       name="description"
-      content="Rainy days official website. Shop proffesional rain jackets for any occation."
+      content="Rainy days official website. A red raincoat with a long form with pockets and a hood"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/rainydays.css" />
@@ -38,7 +38,7 @@
       <div id="headernav">
         <nav>
           <ul>
-            <li class="navunderline"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -95,88 +95,108 @@
         </ul>
       </div>
     </div>
-    <main>
-      <div id="indexbackground">
-        <img
-          src="images/index.jpg"
-          alt="Person hiking with mountains behind them"
-        />
-        <div id="indexbackgroundtext">
-          <h1>Pushing the comfort zone</h1>
-          <a href="shop.html">
-            <div class="orangebutton">
-              <p>SHOP NOW</p>
-            </div>
-          </a>
-        </div>
-        <div id="scrolldownbutton">
-          <a href="#indexflexbox">
-            <img
-              src="images/icons/arrowdownwhite.png"
-              alt="Arrow for scroll down button"
-            />
-          </a>
-        </div>
-      </div>
 
-      <div id="indexflexbox">
-        <div id="flex1">
-          <div class="squareimage">
-            <img
-              src="images/hikerswbackpack.jpg"
-              alt="Two people hiking with a snowy mountain in the background"
-            />
-          </div>
-          <h2>AUTUMN COLLECTION 2020</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata
-          </p>
-          <a href="shop.html">Check out the new collection here!</a>
-        </div>
-        <div id="flex2">
-          <div class="squareimage">
-            <img
-              src="images/founder.jpg"
-              alt="Portrait of Rainy days founder"
-            />
-          </div>
-          <h2>OUR STORY</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata
-          </p>
-          <a href="about.html">Learn more about us here!</a>
-        </div>
+    <main>
+      <div class="breadcumbsnobanner">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blueproduct.html">Product name</a></li>
+        </ul>
       </div>
-      <div id="carouseltitle">
-        <h2>Populare now</h2>
-      </div>
-      <div id="indexcarousel">
-        <!--
-        <div class="carouselcontent">
-          <div class="carouselimage">
-            <img src="images/bluefrontlong.png" alt="Blue rain jacket" />
+      <div class="productpage">
+        <div class="productphoto">
+          <div class="carousel-wrapper">
+            <div class="carousel-item item-1">
+              <a class="arrow arrow-prev" href="#target-item-2">
+                <img
+                  src="images/icons/arrowrightblue.png"
+                  style="transform: rotate(180deg)"
+                  alt="arrow to change photo thats displayed"
+              /></a>
+              <a class="arrow arrow-next" href="#target-item-2">
+                <img
+                  src="images/icons/arrowrightblue.png"
+                  style="transform: rotate(180deg)"
+                  alt="arrow to change photo thats displayed"
+              /></a>
+            </div>
+
+            <div class="carousel-item light item-2">
+              <a class="arrow arrow-prevback" href="#target-item-1"
+                ><img
+                  src="images/icons/arrowrightblue.png"
+                  style="transform: rotate(180deg)"
+                  alt="arrow to change photo thats displayed"
+                />
+              </a>
+              <a class="arrow arrow-nextback" href="#target-item-1"
+                ><img
+                  src="images/icons/arrowrightblue.png"
+                  style="transform: rotate(180deg)"
+                  alt="arrow to change photo thats displayed"
+              /></a>
+            </div>
           </div>
-          <a href="blueproduct.html">SHOP NOW</a>
         </div>
-        <div class="carouselcontent">
-          <div class="carouselimage">
-            <img src="images/yellowfrontlong.png" alt="Yellow rain jacket" />
+
+        <div class="productinfo">
+          <div class="productintro"></div>
+          <div class="productoptions"></div>
+          <div id="sizeoptions">
+            <input id="size_xs" type="radio" name="sizeoptionscheckbox" />
+            <label for="size_xs"> <p>XS</p> </label>
+            <input id="size_s" type="radio" name="sizeoptionscheckbox" />
+            <label for="size_s"> <p>S</p> </label>
+            <input id="size_m" type="radio" name="sizeoptionscheckbox" />
+            <label for="size_m"> <p>M</p> </label>
+            <input id="size_l" type="radio" name="sizeoptionscheckbox" />
+            <label for="size_l"> <p>L</p> </label>
+            <input id="size_xl" type="radio" name="sizeoptionscheckbox" />
+            <label for="size_xl"> <p>XL</p> </label>
           </div>
-          <a href="yellowproduct.html">SHOP NOW</a>
-        </div>
-        <div class="carouselcontent">
-          <div class="carouselimage">
-            <img src="images/redfrontlong.png" alt="Red rain jacket" />
+          <button class="addtocart">
+            <p>Add to cart</p>
+            <div class="addtocartimg">
+              <img
+                src="images/icons/plussiconwhite.png"
+                alt="Pluss icon for add to cart function"
+              />
+            </div>
+          </button>
+          <div class="produchelp">
+            <h2>Description</h2>
           </div>
-          <a href="redproduct.html">SHOP NOW</a>
+          <div class="dropdownproduct">
+            <h2>Details</h2>
+            <input id="check01" type="checkbox" name="dropdownproduct" />
+            <label for="check01">
+                <img
+                src="images/icons/arrowdownblue.png"
+                alt="Arrow pointing down, reveals product details"
+              />
+            </label>
+            <div class="dropdownproduct-content dropdownproduct-details">
+              
+            </div>
+            <div class="blueunderline"></div>
+            <div class="produchelpdropdown">
+              <h2>Size guide</h2>
+              <div class="dropdownproduct">
+                <input id="check02" type="checkbox" name="dropdownproduct" />
+                <label for="check02">
+                  <img
+                    src="images/icons/arrowdownblue.png"
+                    alt="Arrow pointing down, reveals size guide"
+                  />
+                </label>
+                <div class="dropdownproduct-content dropdownproduct-sizeguide">
+                  
+                </div>
+                <div class="blueunderline"></div>
+          </div>
         </div>
-        -->
+        </div>
       </div>
     </main>
     <footer>
@@ -208,6 +228,6 @@
         <h3>Copyright &copy;</h3>
       </div>
     </footer>
-    <script src="js/randomeproducts.js"></script>
+    <script src="js/singleproduct.js"></script>
   </body>
 </html>

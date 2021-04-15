@@ -600,7 +600,8 @@ footer {
 #shopproducts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+
+  grid-gap: 40px;
   width: 80vw;
   margin-left: 10vw;
 }
@@ -613,6 +614,10 @@ footer {
 
 .product img {
   width: 100%;
+  background-color: #f2f2f2;
+}
+
+.product {
 }
 
 /* API call end*/
@@ -690,15 +695,16 @@ p {
 
 .productphoto {
   width: 90%;
-  float: left;
 }
 
 .carousel-wrapper {
   position: relative;
+
+  background: pink;
 }
 
 .carousel-item {
-  position: absolute;
+  position: relative;
   width: 100%;
   transition: all 0.5s ease-in-out;
   background-color: #f2f2f2;
@@ -725,7 +731,8 @@ p {
   height: 100%;
 }
 
-.arrow-prev img {
+.arrow-prev img,
+.arrow-prevback img {
   display: absolute;
   width: 100%;
   height: auto;
@@ -734,7 +741,8 @@ p {
   background-color: transparent;
 }
 
-.arrow-next img {
+.arrow-next img,
+.arrow-nextback img {
   display: block;
   width: 100%;
   height: auto;
@@ -743,7 +751,8 @@ p {
   background-color: transparent;
 }
 
-.arrow-next {
+.arrow-next,
+.arrow-nextback {
   right: 0;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
