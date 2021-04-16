@@ -5,6 +5,7 @@ const dropdownDetails = document.querySelector(".dropdownproduct-details");
 const dropdownSizeguide = document.querySelector(".dropdownproduct-sizeguide");
 const producDescription = document.querySelector(".produchelp");
 const productOptions = document.querySelector(".productoptions");
+const currentProductLink = document.querySelector(".productLink");
 
 const queryString = document.location.search;
 
@@ -45,16 +46,19 @@ async function getProduct() {
     function getProducts(allProducts) {
       const currentProductCategories = productDetails.categories;
 
-      // determin men or women category
+      // determin category
       for (var i = 0; i < currentProductCategories.length; i++) {
         const category = currentProductCategories[i].name;
 
-        //
         allProducts.forEach(function (allProduct) {
           const productCategories = allProduct.categories;
 
           for (var i = 0; i < productCategories.length; i++) {
-            if (category == "Men" && productCategories[i].name == "Men") {
+            if (
+              category == "Men" &&
+              productCategories[i].name == "Men" &&
+              allProduct.id != id
+            ) {
               console.log("Men");
               productOptions.innerHTML += `
             <a href="product.html?id=${allProduct.id}" class="coloroptions">
@@ -64,7 +68,8 @@ async function getProduct() {
         </a>`;
             } else if (
               category == "Women" &&
-              productCategories[i].name == "Women"
+              productCategories[i].name == "Women" &&
+              allProduct.id != id
             ) {
               console.log("Women");
               productOptions.innerHTML += `
@@ -77,56 +82,7 @@ async function getProduct() {
           }
         });
       }
-
-      /*
-      allProducts.forEach(function (allProduct) {
-        const productCategories = allProduct.categories;
-
-        for (var i = 0; i < productCategories.length; i++) {
-          if (productCategories[i].name === "Men" && allProducts[i].id != id) {
-            productOptions.innerHTML += `
-
-        <a href="product.html?id=${allProduct.id}" class="coloroptions">
-        <div  class="colorselection">
-          <img src="${allProduct.images[0].src}" alt="${allProduct.images[0].alt}"/>
-        </div>
-        </a>
-        `;
-          }
-        }
-      });*/
-
-      /*
-  // Photo showing current product
-  allProducts.forEach(function (currentProduct) {
-    if (currentProduct.id == id) {
-      productIntro.innerHTML += `<a href="product.html?id=${currentProduct.id}" class="coloroptions">
-      <div id="jacketborder" class="colorselection">
-      <img src="${currentProduct.images[0].src}">
-      </div>
-      </a>`;
     }
-  });
-  // Photo showing related products
-  allProducts.forEach(function (relatedProduct) {
-    if (relatedProduct.id == id) {
-      for (var i = 0; i < relatedProduct.length; i++) {
-        console.log(relatedProduct[i]);
-      }
-    }
-
-    if (relatedProduct.id != id) {
-      /*console.log(relatedProduct);*/
-      /*
-    }
-  });*/
-      /*
-  console.log(allProducts);
-  console.log(id); */
-    }
-
-    //
-    //
   } catch (error) {
     console.log(error);
   }
@@ -135,6 +91,10 @@ async function getProduct() {
 getProduct();
 
 function createHTML(productDetails) {
+  currentProductLink.innerHTML += `<a>
+  ${productDetails.name}
+  </a>`;
+
   carouselitem1.innerHTML += `<img src="${productDetails.images[0].src}" alt="${productDetails.images[0].alt}" />`;
   carouselitem2.innerHTML += `<img src="${productDetails.images[1].src}" alt="${productDetails.images[1].alt}" />`;
   carouselitem2.style.display = "none";
@@ -157,17 +117,12 @@ function createHTML(productDetails) {
   carouselitem2.addEventListener("click", changeImageBack);
 
   productIntro.innerHTML += ` 
-   <h2> ${productDetails.name}</h2>`; /*
-   `<a href="product.html?id=${productDetails.id}" class="coloroptions">
+   <h2> ${productDetails.name}</h2>`;
+  productOptions.innerHTML += `<a href="product.html?id=${productDetails.id}" class="coloroptions">
    <div id="jacketborder" class="colorselection">
    <img src="${productDetails.images[0].src}">
    </div>
-   </a>
-   <a href="product.html?id=${productDetails.id}" class="coloroptions">
-   <div id="jacketborder" class="colorselection">
-   <img src="${productDetails.images[0].src}">
-   </div>
-   </a>`;*/
+   </a>`;
   producDescription.innerHTML += `${productDetails.short_description}`;
   dropdownDetails.innerHTML += `${productDetails.description}`;
   dropdownSizeguide.innerHTML += `${productDetails.description}`;

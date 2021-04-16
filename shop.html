@@ -116,6 +116,70 @@
           <li><a href="shop.html">Shop</a></li>
         </ul>
       </div>
+
+      <div id="sortingbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Gender
+            <div class="dropdownimg">
+              <img
+                src="images/icons/arrowdownblue.png"
+                alt="Arrow pointing down"
+              />
+            </div>
+          </button>
+          <div class="dropdown-content">
+            <input type="checkbox" id="women" />
+            <label for="women"> Women </label>
+            <input type="checkbox" id="men" />
+            <label for="men"> Men </label>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Sort
+            <div class="dropdownimg">
+              <img
+                src="images/icons/arrowdownblue.png"
+                alt="Arrow pointing down"
+              />
+            </div>
+          </button>
+          <div class="dropdown-content">
+            <input type="checkbox" id="new" />
+            <label for="new"> New </label>
+            <input type="checkbox" id="populare" />
+            <label for="populare"> Populare </label>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">
+            Color
+            <div class="dropdownimg">
+              <img
+                src="images/icons/arrowdownblue.png"
+                alt="Arrow pointing down"
+              />
+            </div>
+          </button>
+          <div class="dropdown-content">
+            <input type="checkbox" id="blue" />
+            <label for="blue">Blue</label>
+            <input type="checkbox" id="yellow" />
+            <label for="yellow">Yellow</label>
+            <input type="checkbox" id="red" />
+            <label for="red">Red</label>
+            <input type="checkbox" id="purple" />
+            <label for="purple">Purple</label>
+          </div>
+        </div>
+      </div>
+      <div class="filter">
+        <label for="clearfilter" id="filterlabel"> Clear filter</label>
+        <input type="checkbox" id="clearfilter"></input>
+      </div>
+
       <!--
       <div id="sortingbar">
         <div class="dropdown">
@@ -180,114 +244,15 @@
         <input type="checkbox" id="clearfilter"></input>
       </div>
       -->
-      <div id="shopproducts">
-        <!--
-        <a href="blueproduct.html" class="productblue productpopulare productmen productlist">
-          <img src="images/bluefrontlong.png" alt="Blue jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="purpleproduct.html" class="productpurple productpopulare productwomen productlist">
-          <img src="images/purplefrontlong.png" alt="Purple jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="redproduct.html" class="productred productpopulare productwomen productlist">
-          <img src="images/redfrontlong.png" alt="Red jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="yellowproduct.html" class="productyellow productnew productwomen productlist">
-          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="blueproduct.html" class="productblue productpopulare productmen productlist">
-          <img src="images/bluefrontlong.png" alt="Blue jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="purpleproduct.html" class="productpurple productnew productmen productlist">
-          <img src="images/purplefrontlong.png" alt="Purple jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="redproduct.html" class="productred productnew productwomen productlist">
-          <img src="images/redfrontlong.png" alt="Red jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="yellowproduct.html" class="productyellow  productpopulare productmen productlist">
-          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="blueproduct.html" class="productblue productpopulare productwomen productlist">
-          <img src="images/bluefrontlong.png" alt="Blue jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="purpleproduct.html" class="productpurple productnew productwomen productlist">
-          <img src="images/purplefrontlong.png" alt="Purple jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="redproduct.html" class="productred productpopulare productwomen productlist">
-          <img src="images/redfrontlong.png" alt="Red jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="yellowproduct.html" class="productyellow productpopulare productwomen productlist">
-          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="blueproduct.html" class="productblue productnew productmen productlist">
-          <img src="images/bluefrontlong.png" alt="Blue jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="purpleproduct.html" class="productpurple productpopulare productmen productlist">
-          <img src="images/purplefrontlong.png" alt="Purple jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="redproduct.html" class="productred productpopulare productwomen productlist">
-          <img src="images/redfrontlong.png" alt="Red jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-        <a href="yellowproduct.html" class="productyellow productnew productwomen productlist">
-          <img src="images/yellowfrontlong.png" alt="Yellow jacket" />
-          <h2>Product name</h2>
-          <p>Colour</p>
-          <p>799 ,- NOK</p>
-        </a>
-         -->
-      </div>
-
+      <div id="shopproducts"></div>
+      <!--
       <div id="nextpage">
         <div id="next">
           <h3>Page 1 of 2</h3>
         </div>
         <a href="shoppagetwo.html"><h3>Next</h3></a>
       </div>
-    </main>
+    --></main>
     <footer>
       <div id="footer">
         <div id="footerlogo">
