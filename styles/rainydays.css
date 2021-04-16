@@ -41,14 +41,14 @@ a {
 #filterlabel {
   display: none;
   font-family: ff-basic-gothic-pro, sans-serif;
-  margin-top: 3vw;
-  margin-bottom: 5vw;
+
+  margin-bottom: 25px;
   float: left;
   margin-left: 10vw;
   background-color: #0d738c;
   padding: 5px;
   border-radius: 3px;
-  height: 40px;
+
   width: 160px;
   text-align: center;
 
@@ -511,6 +511,7 @@ footer {
 
 #sortingbar {
   margin-left: 10vw;
+  margin-bottom: 25px;
 }
 
 .dropbtn {
@@ -597,7 +598,12 @@ footer {
   background-color: #f2f2f2;
 }
 
-#shopproducts {
+#sortContainer {
+  display: none;
+}
+
+#shopproducts,
+#sortContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
@@ -606,7 +612,8 @@ footer {
   margin-left: 10vw;
 }
 
-#shopproducts a {
+#shopproducts a,
+#sortContainer a {
   color: black;
 }
 
@@ -1860,6 +1867,7 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: row;
     justify-content: left;
     margin-left: 10vw;
+    margin-bottom: 25px;
   }
 
   .dropbtn {
@@ -1881,7 +1889,8 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 20vw;
   }
 
-  #shopproducts {
+  #shopproducts,
+  #sortContainer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     width: 80vw;
@@ -1889,7 +1898,8 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 10vw;
   }
 
-  #shopproducts a {
+  #shopproducts a,
+  #sortContainer a {
     color: black;
   }
 
