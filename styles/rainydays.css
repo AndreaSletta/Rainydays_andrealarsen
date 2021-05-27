@@ -91,7 +91,7 @@ form > h3 {
   display: none;
 }
 
-header {
+#headerdesktop {
   background-color: white;
   display: flex;
   margin: auto;
@@ -1539,13 +1539,13 @@ input[type="number"]::-webkit-outer-spin-button {
 @media only screen and (max-width: 768px) {
   /* NAVIGATION*/
 
-  header {
+  #headerdesktop {
     display: none;
   }
   #headerphone {
     display: flex;
     width: 100vw;
-    height: 50px;
+    height: 70px;
     background-color: white;
     position: fixed;
     flex-direction: row;
@@ -1632,6 +1632,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: white;
     margin-top: 50px;
     width: 100vw;
+    height: fit-content;
     transition-property: all;
     transition-duration: 0.2s;
   }
@@ -1681,7 +1682,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #navburger ul li {
-    padding: 10px;
+    padding: 20px;
     font-style: normal;
     list-style: none;
   }

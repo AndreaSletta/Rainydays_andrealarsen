@@ -11,90 +11,77 @@
     <link rel="stylesheet" href="https://use.typekit.net/msh8obx.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/rainydays.js"></script>
-    <!-- Hotjar Tracking Code for https://andreaslettarainydays.netlify.app -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2270563, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
   <body>
     <header>
-      <div id="headerlogo">
-        <a href="index.html">
-          <img src="images/RainyDays_Logo_notext.png" alt="Rainy days logo" />
-        </a>
+      <div id="headerdesktop">
+        <div id="headerlogo">
+          <a href="index.html">
+            <img src="images/RainyDays_Logo_notext.png" alt="Rainy days logo" />
+          </a>
+        </div>
+        <div id="headernav">
+          <nav>
+            <ul>
+              <li class="navunderline"><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="headercart">
+          <a href="cart.html">
+            <img src="images/icons/carticon.png" alt="Cart icon" />
+          </a>
+        </div>
+        <div id="headersearch">
+          <label for="searchinput" id="searchlabel"
+            ><img src="images/icons/searchicon.png" alt="Search icon"
+          /></label>
+          <input name="search" type="checkbox" id="searchinput" />
+          <input type="text" class="search" autofocus="true" />
+        </div>
       </div>
-      <div id="headernav">
-        <nav>
+      <div id="headerphone">
+        <div id="headerlogo">
+          <a href="index.html">
+            <img src="images/RainyDays_Logo_notext.png" alt="Rainy days logo" />
+          </a>
+        </div>
+
+        <div id="headersearch">
+          <label for="searchinputphone" id="searchlabel"
+            ><img src="images/icons/searchicon.png" alt="Search icon"
+          /></label>
+          <input name="search" type="checkbox" id="searchinputphone" />
+          <input type="text" class="search" autofocus="true" />
+        </div>
+        <div id="headercart">
+          <a href="cart.html">
+            <img src="images/icons/carticon.png" alt="Cart icon" />
+          </a>
+        </div>
+
+        <input type="checkbox" id="hamburgermenu" />
+        <label for="hamburgermenu" id="hamburgerlabel">
+          <div class="container" onclick="myFunction(this)">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+          </div>
+        </label>
+        <div id="navburger">
           <ul>
-            <li class="navunderline"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-        </nav>
-      </div>
-      <div id="headercart">
-        <a href="cart.html">
-          <img src="images/icons/carticon.png" alt="Cart icon" />
-        </a>
-      </div>
-      <div id="headersearch">
-        <label for="searchinput" id="searchlabel"
-          ><img src="images/icons/searchicon.png" alt="Search icon"
-        /></label>
-        <input name="search" type="checkbox" id="searchinput" />
-        <input type="text" class="search" autofocus="true" />
+        </div>
       </div>
     </header>
-    <div id="headerphone">
-      <div id="headerlogo">
-        <a href="index.html">
-          <img src="images/RainyDays_Logo_notext.png" alt="Rainy days logo" />
-        </a>
-      </div>
 
-      <div id="headersearch">
-        <label for="searchinputphone" id="searchlabel"
-          ><img src="images/icons/searchicon.png" alt="Search icon"
-        /></label>
-        <input name="search" type="checkbox" id="searchinputphone" />
-        <input type="text" class="search" autofocus="true" />
-      </div>
-      <div id="headercart">
-        <a href="cart.html">
-          <img src="images/icons/carticon.png" alt="Cart icon" />
-        </a>
-      </div>
-
-      <input type="checkbox" id="hamburgermenu" />
-      <label for="hamburgermenu" id="hamburgerlabel">
-        <div class="container" onclick="myFunction(this)">
-          <span id="span1"></span>
-          <span id="span2"></span>
-          <span id="span3"></span>
-        </div>
-      </label>
-      <div id="navburger">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
     <main>
       <div id="indexbackground">
         <img
@@ -156,28 +143,7 @@
       <div id="carouseltitle">
         <h2>Populare now</h2>
       </div>
-      <div id="indexcarousel">
-        <!--
-        <div class="carouselcontent">
-          <div class="carouselimage">
-            <img src="images/bluefrontlong.png" alt="Blue rain jacket" />
-          </div>
-          <a href="blueproduct.html">SHOP NOW</a>
-        </div>
-        <div class="carouselcontent">
-          <div class="carouselimage">
-            <img src="images/yellowfrontlong.png" alt="Yellow rain jacket" />
-          </div>
-          <a href="yellowproduct.html">SHOP NOW</a>
-        </div>
-        <div class="carouselcontent">
-          <div class="carouselimage">
-            <img src="images/redfrontlong.png" alt="Red rain jacket" />
-          </div>
-          <a href="redproduct.html">SHOP NOW</a>
-        </div>
-        -->
-      </div>
+      <div id="indexcarousel"></div>
     </main>
     <footer>
       <div id="footer">
