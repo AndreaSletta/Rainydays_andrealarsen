@@ -1640,7 +1640,6 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #hamburgerlabel {
-    height: 25px;
     position: absolute;
     left: 20px;
     margin: 0;
@@ -1671,7 +1670,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     cursor: pointer;
     height: 40px;
     width: 30px;
