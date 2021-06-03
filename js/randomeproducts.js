@@ -3,11 +3,14 @@ window.onload = function () {
 
   const url = "https://www.andreasletta.eu/wp-json/wc/store/products";
   const featuredProductsContainer = document.querySelector("#indexcarousel");
+  const loading = document.querySelector(".loading");
 
   async function getProducts() {
     try {
       const respons = await fetch(url);
       const getResults = await respons.json();
+
+      loading.style.display = "none";
 
       //test api call
       console.log(getResults);

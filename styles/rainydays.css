@@ -1736,6 +1736,28 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-right: 10px;
   }
 
+  /*Loader*/
+  .loading {
+    margin-top: 80px;
+    width: 100vw;
+    height: 40px;
+    display: grid;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .loading img {
+    animation: rotate 3s ease infinite;
+    height: 100%;
+    width: 40px;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   /* INDEX */
   h1 {
     font-size: 10vw;

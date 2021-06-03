@@ -23,11 +23,13 @@ window.onload = function () {
 
   // get singe product
 
+  const loading = document.querySelector(".loading");
+
   async function getProduct() {
     try {
       const respons = await fetch(productURL);
       const productDetails = await respons.json();
-
+      loading.style.display = "none";
       createHTML(productDetails);
 
       // get all products
