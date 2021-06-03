@@ -39,6 +39,28 @@ a {
   text-decoration: none !important;
 }
 
+/*Loader*/
+.loading {
+  margin-top: 80px;
+  width: 100vw;
+  height: 40px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
+
+.loading img {
+  animation: rotate 3s ease infinite;
+  height: 100%;
+  width: 40px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #clearfilter {
   display: none;
 }
@@ -1734,28 +1756,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 25px;
     height: auto;
     margin-right: 10px;
-  }
-
-  /*Loader*/
-  .loading {
-    margin-top: 80px;
-    width: 100vw;
-    height: 40px;
-    display: grid;
-    justify-content: center;
-    align-self: center;
-  }
-
-  .loading img {
-    animation: rotate 3s ease infinite;
-    height: 100%;
-    width: 40px;
-  }
-
-  @keyframes rotate {
-    100% {
-      transform: rotate(360deg);
-    }
   }
 
   /* INDEX */

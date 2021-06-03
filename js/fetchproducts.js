@@ -21,12 +21,19 @@ window.onload = function () {
   const clearFilter = document.querySelector("#filterlabel");
 
   const loading = document.querySelector(".loading");
+  const shopproducts = document.querySelector("#shopproducts");
+
+  shopproducts.style.display = "none";
 
   async function getProducts() {
     try {
       const respons = await fetch(url);
       const getResults = await respons.json();
+
       loading.style.display = "none";
+
+      shopproducts.style.display = "grid";
+
       //test api call
       console.log(getResults);
       getSort(getResults);

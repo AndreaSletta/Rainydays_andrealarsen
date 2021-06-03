@@ -20,16 +20,25 @@ window.onload = function () {
 
   const productURL =
     "https://www.andreasletta.eu/wp-json/wc/store/products/" + id;
-
-  // get singe product
+  //loader
 
   const loading = document.querySelector(".loading");
+
+  const productpage = document.querySelector(".productpage");
+
+  productpage.style.display = "none";
+
+  // get singe product
 
   async function getProduct() {
     try {
       const respons = await fetch(productURL);
       const productDetails = await respons.json();
+
       loading.style.display = "none";
+
+      productpage.style.display = "grid";
+
       createHTML(productDetails);
 
       // get all products

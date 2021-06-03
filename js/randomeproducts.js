@@ -4,6 +4,9 @@ window.onload = function () {
   const url = "https://www.andreasletta.eu/wp-json/wc/store/products";
   const featuredProductsContainer = document.querySelector("#indexcarousel");
   const loading = document.querySelector(".loading");
+  const indexcarousel = document.querySelector("#indexcarousel");
+
+  indexcarousel.style.display = "none";
 
   async function getProducts() {
     try {
@@ -12,6 +15,7 @@ window.onload = function () {
 
       loading.style.display = "none";
 
+      indexcarousel.style.display = "flex";
       //test api call
       console.log(getResults);
 
