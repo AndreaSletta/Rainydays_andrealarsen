@@ -151,7 +151,6 @@ window.onload = function () {
                 clearFilter.style.display = "block";
                 sortContainer.style.display = "grid";
                 sortContainer.innerHTML += `<a href="product.html?id=${allProduct.id}" class="product" >
-             
                 <img src="${allProduct.images[0].src}" alt="${allProduct.name}">
                 <h2>${allProduct.name}</h2>
                 <p>${allProduct.prices.price} ${allProduct.prices.currency_code}</p>
